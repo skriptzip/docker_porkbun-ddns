@@ -26,6 +26,7 @@ def update_porkbun(ip):
         "ttl": "300"
     }
     r = requests.post(url, json=payload, timeout=10)
+    print(f"API Response: {r.status_code} - {r.text}")
     r.raise_for_status()
 
 def main():
