@@ -15,8 +15,8 @@ on:
 env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: ghcr.io
-  # Image name to publish
-  IMAGE_NAME: porkbun-ddns
+  # github.repository_owner as <account>, then image name
+  IMAGE_NAME: ${{ github.repository_owner }}/porkbun-ddns
 
 
 jobs:
