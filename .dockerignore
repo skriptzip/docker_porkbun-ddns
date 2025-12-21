@@ -1,0 +1,32 @@
+# Git
+.git
+.gitignore
+.github
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pytest_cache/
+*.egg-info/
+
+# Virtualenvs
+.venv/
+venv/
+
+# Env / Secrets
+.env
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+
+# Logs & Runtime
+*.log
+data/

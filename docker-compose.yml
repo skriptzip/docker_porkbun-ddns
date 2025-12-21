@@ -1,0 +1,23 @@
+services:
+  ddns:
+    build: .
+    image: ghcr.io/skriptzip/porkbun-ddns:latest
+    container_name: porkbun-ddns
+    restart: unless-stopped
+    
+    labels:
+      - "com.docker.compose.project=porkbun-ddns"
+      - "app.name=porkbun-ddns"
+      - "app.version=1.0.0"
+      - "app.description=Dynamic DNS updater for Porkbun"
+      - "maintainer=skriptzip"
+
+    environment:
+      PORKBUN_API_KEY: "${PORKBUN_API_KEY}"
+      PORKBUN_SECRET_API_KEY: "${PORKBUN_SECRET_API_KEY}"
+      DOMAIN: "${DOMAIN}"
+      SUBDOMAIN: "${SUBDOMAIN}"
+      CHECK_INTERVAL: "${CHECK_INTERVAL:-300}"
+
+    volumes:
+      - ./data:/data
