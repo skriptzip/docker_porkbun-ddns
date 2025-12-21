@@ -25,6 +25,8 @@ def update_porkbun(ip):
         "content": ip,
         "ttl": "300"
     }
+    print(f"Updating DNS: {DOMAIN}/{SUB} with IP {ip}")
+    print(f"API URL: {url}")
     r = requests.post(url, json=payload, timeout=10)
     print(f"API Response: {r.status_code} - {r.text}")
     r.raise_for_status()
