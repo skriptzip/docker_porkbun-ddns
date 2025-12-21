@@ -20,6 +20,7 @@ COPY ddns.py .
 
 RUN useradd -r -u 1001 appuser && \
     mkdir -p /data && \
+    touch /data/last_ip.txt && \
     chown -R appuser:appuser /data
 
 USER appuser
