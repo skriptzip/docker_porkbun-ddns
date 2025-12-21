@@ -18,7 +18,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY ddns.py .
 
-RUN useradd -r -u 1001 appuser
+RUN useradd -r -u 1001 appuser && \
+    mkdir -p /data && \
+    chown -R appuser:appuser /data
+
 USER appuser
 
 CMD ["python", "ddns.py"]
