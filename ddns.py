@@ -29,7 +29,7 @@ def update_porkbun(ip):
     print(f"API URL: {url}")
     r = requests.post(url, json=payload, timeout=10)
     print(f"API Response: {r.status_code} - {r.text}")
-    r.raise_for_status()
+    # r.raise_for_status()
 
 def main():
     last_ip = None

@@ -19,5 +19,7 @@ services:
       SUBDOMAIN: "${SUBDOMAIN}"
       CHECK_INTERVAL: "${CHECK_INTERVAL:-300}"
 
+    user: "1001:1001"
+
     volumes:
-      - ./data:/data:Z
+      - ./data:/data
