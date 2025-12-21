@@ -20,4 +20,4 @@ services:
       CHECK_INTERVAL: "${CHECK_INTERVAL:-300}"
 
     volumes:
-      - ./data:/data
+      - ./data:/data:Z
