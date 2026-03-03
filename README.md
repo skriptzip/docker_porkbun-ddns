@@ -4,11 +4,10 @@ A lightweight Docker-based Dynamic DNS updater for Porkbun domains. This service
 
 ## Features
 
-- 🚀 **Automatic DNS Updates** - Detects IP changes and updates Porkbun DNS records
-- 🐳 **Docker Ready** - Pre-configured with Docker and Docker Compose
-- ⚙️ **Configurable** - Customizable check intervals and IP detection sources
-- 📝 **Persistent State** - Tracks the last known IP to avoid unnecessary API calls
-- 🔄 **Resilient** - Automatic retry on errors with continuous polling
+- **Automatic DNS Updates** - Detects IP changes and updates Porkbun DNS records
+- **Docker Ready** - Pre-configured with Docker and Docker Compose
+- **Configurable** - Customizable check intervals and IP detection sources
+- **Persistent State** - Tracks the last known IP to avoid unnecessary API calls
 
 ## Prerequisites
 
