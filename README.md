@@ -1,4 +1,4 @@
-# Porkbun DDNS
+# <img src="https://porkbun.com/images/porkbun-logo-1200x1200.png" height="32" style="vertical-align:middle; margin-right:8px;"/> Porkbun DDNS
 
 A lightweight Docker-based Dynamic DNS updater for Porkbun domains. This service continuously monitors your public IP address and automatically updates your Porkbun DNS records when changes are detected.
 
