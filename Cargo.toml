@@ -1,0 +1,17 @@
+[package]
+name = "porkbun-ddns"
+version = "1.0.0"
+edition = "2021"
+description = "Dynamic DNS updater for Porkbun domains"
+license = "MIT"
+
+[dependencies]
+ureq = { version = "2", features = ["json"] }
+serde_json = "1"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
