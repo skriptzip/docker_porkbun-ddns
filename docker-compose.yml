@@ -15,9 +15,11 @@ services:
     environment:
       PORKBUN_API_KEY: "${PORKBUN_API_KEY}"
       PORKBUN_SECRET_API_KEY: "${PORKBUN_SECRET_API_KEY}"
-      DOMAIN: "${DOMAIN}"
-      SUBDOMAIN: "${SUBDOMAIN}"
+      HOSTS: "${HOSTS:-}"
+      DOMAIN: "${DOMAIN:-}"
+      SUBDOMAIN: "${SUBDOMAIN:-}"
       CHECK_INTERVAL: "${CHECK_INTERVAL:-300}"
+      IP_CHECK_URL: "${IP_CHECK_URL:-https://api.ipify.org}"
 
     user: "1001:1001"
 
