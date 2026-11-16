@@ -11,7 +11,8 @@ RUN mkdir src && echo "fn main() {}" > src/main.rs && \
     rm -rf src target/release/porkbun-ddns* target/release/deps/porkbun_ddns*
 
 COPY src ./src
-RUN cargo build --release
+# Force a rebuild: the copied sources may be older than the dummy build output
+RUN touch src/main.rs && cargo build --release
 
 # The scratch image has no shell, so prepare /data here
 RUN mkdir /data && touch /data/last_ip.txt && chown -R 1001:1001 /data
